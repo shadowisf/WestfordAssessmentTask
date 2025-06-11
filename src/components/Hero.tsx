@@ -8,7 +8,7 @@ import IconBlocks from "@assets/icons/blocks.svg";
 
 export default function Hero() {
   return (
-    <main className="flex justify-between">
+    <main className="relative flex justify-between">
       {/* left container wrapper */}
       <div className="w-full mt-[83px] text-[16px]">
         {/* left container */}
@@ -54,8 +54,16 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* hero image */}
-      <img src={ImageHero} className="w-[574px] h-[536px] absolute right-0" />
+      {/* hero image container */}
+      <div className="absolute right-0 bottom-0 w-[574px] h-[536px]">
+        {/* white overlay in bottom-right corner */}
+        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-white z-0 rounded-tl-[40px]" />
+        <img
+          src={ImageHero}
+          className="w-full h-full object-contain relative z-10"
+          alt="Hero"
+        />
+      </div>
     </main>
   );
 }
