@@ -1,5 +1,9 @@
-import heroImage from "../src/assets/images/hero.png";
+import Hero from "./components/Hero";
 
 export default function App() {
-  return <main>asdasdasdad</main>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
