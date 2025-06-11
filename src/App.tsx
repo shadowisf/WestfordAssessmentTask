@@ -1,29 +1,5 @@
-import heroImage from "../src/assets/hero.png";
+import heroImage from "../src/assets/images/hero.png";
 
 export default function App() {
-  return (
-    <>
-      <div>
-        <img src={heroImage} alt="" />
-      </div>
-      <div>
-        <img src={heroImage} alt="" />
-      </div>
-      <div>
-        <img src={heroImage} alt="" />
-      </div>
-      <div>
-        <img src={heroImage} alt="" />
-      </div>
-      <div>
-        <img src={heroImage} alt="" />
-      </div>
-      <div>
-        <img src={heroImage} alt="" />
-      </div>
-      <div>
-        <img src={heroImage} alt="" />
-      </div>
-    </>
-  );
+  return <main>asdasdasdad</main>;
 }

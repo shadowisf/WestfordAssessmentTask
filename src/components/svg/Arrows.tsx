@@ -15,9 +15,9 @@ export function ArrowUp({ className }: ArrowProps) {
       <path
         d="M5.00024 1V12M5.00024 1L9.00024 5M5.00024 1L1.00024 5"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -57,9 +57,9 @@ export function ArrowRight({ className }: ArrowProps) {
       <path
         d="M12 5L1 5M12 5L8 9M12 5L8 1"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
