@@ -1,6 +1,6 @@
 import ImageHero from "@assets/images/hero.png";
 import { ArrowLeft } from "./svg/Arrows";
-import ImagePearson from "@assets/images/PearsonLogo.png";
+import ImagePearson from "@assets/images/pearson-logo.png";
 import IconClock from "@assets/icons/clock.svg";
 import IconGraphUp from "@assets/icons/graph-up.svg";
 import IconStar from "@assets/icons/star.svg";
@@ -8,7 +8,7 @@ import IconBlocks from "@assets/icons/blocks.svg";
 
 export default function Hero() {
   return (
-    <main className="relative flex justify-between">
+    <div className="relative flex justify-between">
       {/* left container wrapper */}
       <div className="w-full mt-[83px] text-[16px]">
         {/* left container */}
@@ -57,14 +57,14 @@ export default function Hero() {
       {/* hero image container */}
       <div className="absolute right-0 bottom-0 w-[574px] h-[536px]">
         {/* white overlay in bottom-right corner */}
-        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-white z-0 rounded-tl-[40px]" />
+        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-white rounded-tl-[40px]" />
         <img
           src={ImageHero}
-          className="w-full h-full object-contain relative z-10"
+          className="w-full h-full object-contain relative"
           alt="Hero"
         />
       </div>
-    </main>
+    </div>
   );
 }
 

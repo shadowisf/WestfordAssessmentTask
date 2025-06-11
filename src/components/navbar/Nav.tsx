@@ -69,7 +69,7 @@ function NavRightItem({ href, children }: NavRightItemProps) {
   return (
     <a
       href={href}
-      className="px-[25px] transition-colors duration-400 hover:text-[#ECA22D]"
+      className="px-[25px] transition-colors duration-300 ease-out hover:text-[#ECA22D]"
     >
       {children}
     </a>
@@ -94,18 +94,18 @@ function NavRightItemWithArrow({
       href={href}
       className={`group relative px-[25px] flex items-center gap-[8px] ${
         state ? "text-[#ECA22D]" : "hover:text-[#ECA22D]"
-      } transition-colors duration-300`}
+      } transition-colors duration-300 ease-out`}
       onClick={onClick}
     >
       {children}
       <span className="relative w-[10px] h-[13px]">
         <ArrowDown
-          className={`absolute top-0 left-0 transition-opacity duration-300 ${
+          className={`absolute top-0 left-0 transition-opacity duration-300 ease-out ${
             state ? "opacity-0" : "opacity-100"
           }`}
         />
         <ArrowUp
-          className={`absolute top-0 left-0 transition-opacity duration-300 ${
+          className={`absolute top-0 left-0 transition-opacity duration-300 ease-out ${
             state ? "opacity-100" : "opacity-0"
           }`}
         />

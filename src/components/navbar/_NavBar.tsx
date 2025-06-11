@@ -8,7 +8,7 @@ export default function NavBar() {
   const [deMontPlusOpen, setDeMontPlusOpen] = useState(false);
 
   return (
-    <>
+    <main className="font-poppins font-medium">
       <Header />
 
       <Nav
@@ -22,6 +22,6 @@ export default function NavBar() {
         programsOpen={programsOpen}
         setProgramsOpen={setProgramsOpen}
       />
-    </>
+    </main>
   );
 }

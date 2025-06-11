@@ -18,7 +18,7 @@ export default function ProgramsModal({
   return (
     /* programs modal container */
     <div
-      className={`text-black text-[18px] fixed top-[126px] left-0 w-full h-full bg-[linear-gradient(to_bottom,_#0C2D46_50%,_#0C2D46F2_56%,_#0C2D4600_100%)] transition duration-400 ${
+      className={`text-black text-[18px] fixed top-[126px] left-0 w-full h-full bg-[linear-gradient(to_bottom,_#0C2D46_50%,_#0C2D46F2_56%,_#0C2D4600_100%)] transition duration-300 ease-in-out z-5 ${
         programsOpen
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
@@ -26,12 +26,7 @@ export default function ProgramsModal({
       onClick={() => setProgramsOpen(false)}
     >
       {/* cards grid */}
-      <section
-        role="dialog"
-        aria-modal="true"
-        aria-label="programs modal"
-        className="my-[77px] mx-[36px] grid grid-cols-6 gap-[30px]"
-      >
+      <section className="my-[77px] mx-[36px] grid grid-cols-6 gap-[30px]">
         <ZoomCard image={ImageHigherNationalDiploma}>
           Higher National Diploma
         </ZoomCard>
@@ -68,7 +63,7 @@ function ZoomCard({ image, children }: ZoomCardProps) {
       {/* background Image */}
       <img
         src={image}
-        className="absolute inset-0 w-full h-full object-cover object-bottom transition-transform duration-500 origin-bottom group-hover:scale-[1.15] hover:scale-[1.15]"
+        className="absolute inset-0 w-full h-full object-cover object-bottom transition-transform duration-300 ease-in-out origin-bottom group-hover:scale-[1.15]"
       />
 
       {/* text */}
@@ -78,7 +73,7 @@ function ZoomCard({ image, children }: ZoomCardProps) {
 
       {/* arrow button */}
       <button
-        className="absolute bottom-0 right-0 w-[41px] h-[28px] my-[20px] flex justify-center items-center rounded-s-[15px] cursor-pointer bg-[#ECA22D] text-black transition-colors duration-300 hover:bg-[#0C2D46] hover:text-white"
+        className="absolute bottom-0 right-0 w-[41px] h-[28px] my-[20px] flex justify-center items-center rounded-s-[15px] cursor-pointer bg-[#ECA22D] text-black transition-colors duration-300 ease-in-out hover:bg-[#0C2D46] hover:text-white"
         onMouseEnter={(e) => {
           e.currentTarget.closest("a")?.classList.add("hovered");
         }}
