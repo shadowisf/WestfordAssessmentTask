@@ -1,14 +1,16 @@
 import { useState } from "react";
-import Hero from "./components/2_hero/_Hero";
-import ProgrammeOverview from "./components/3_programmeOverview/_ProgramOverview";
-import TopSkillsYouWillLearn from "./components/4_topSkillsYouWillLearn/_TopSkillSYouWillLearn";
-import JobOpportunities from "./components/5_jobOpportunities/_JobOpportunities";
-import MinimumEligibility from "./components/6_minimumEligibility/_MinimumEligibility";
-import RelatedCourses from "./components/7_relatedCourses/_RelatedCourses";
-import AcademicPartners from "./components/8_academicPartners/_AcademicPartners";
-import { ArrowRightLongerA } from "./components/svg/ArrowsLonger";
-import { Minus, Plus } from "./components/svg/Math";
-import ImageExploreCourses from "@assets/images/explore-courses.png";
+import Hero from "./components/2-hero/_Hero";
+import ProgrammeOverview from "./components/3-programme-overview/_ProgramOverview";
+import TopSkillsYouWillLearn from "./components/4-top-skills/_TopSkillSYouWillLearn";
+import JobOpportunities from "./components/5-job-opportunities/_JobOpportunities";
+import MinimumEligibility from "./components/6-minimum-eligibility/_MinimumEligibility";
+import RelatedCourses from "./components/7-related-courses/_RelatedCourses";
+import AcademicPartners from "./components/8-academic-partners/_AcademicPartners";
+import ExploreCourses from "./components/9-explore-courses/_ExploreCourses";
+import IconDeMontLogo from "@assets/icons/demont-logo.svg";
+import IconPhoneCircled from "@assets/icons/phone-circled.svg";
+import IconSearch from "@assets/icons/search.svg";
+import IconChat from "@assets/icons/chat.svg";
 
 export default function App() {
   const [applyNowHovered, setApplyNowHovered] = useState(false);
@@ -35,93 +37,59 @@ export default function App() {
 
       <AcademicPartners />
 
-      <div className="pt-[69px] pb-[103px] space-y-[69px]">
-        <div className="px-[114px] flex items-center gap-[109px]">
-          <h1 className="text-[40px]">
-            Explore <span className="text-[#ECA22D]">Our Courses</span>
-          </h1>
+      <ExploreCourses />
 
-          <div className="relative w-full max-w-[700px] h-[57px] flex items-center">
-            <input
-              type="search"
-              placeholder="Search courses..."
-              className="w-full h-full py-[13px] px-[35px] rounded-s-[25px] focus:outline-none bg-[#F0F0F0] font-light text-[20px]"
-            />
-            <button className="h-full rounded-e-[25px] bg-[#879DA5] px-[25px] text-white flex items-center justify-center hover:bg-[#0C2D46] transition-colors duration-300 ease-out cursor-pointer">
-              <ArrowRightLongerA />
-            </button>
-          </div>
-        </div>
-
-        <div className="flex gap-[176px] justify-between">
-          <div className="space-y-[35px]">
-            <div className="w-full space-y-[25px]">
-              <ExloreCoursesItem symbol={<Minus />}>
-                Higher National Diploma
-              </ExloreCoursesItem>
-
-              <ul className="ps-[140px] space-y-[15px] text-[20px] list-disc">
-                <li>
-                  <span className="font-light">International In Computing</span>{" "}
-                  (Software Engineering)
-                </li>
-                <li>
-                  <span className="font-light">International in Computing</span>{" "}
-                  (Cyber Security)
-                </li>
-                <li>
-                  <span className="font-light">International In</span> Computing
-                </li>
-                <li>
-                  <span className="font-light">International in Business</span>{" "}
-                  (Business Management)
-                </li>
-                <li>
-                  <span className="font-light">International in Business</span>{" "}
-                  (Marketing)
-                </li>
-                <li>
-                  <span className="font-light">International in Business</span>{" "}
-                  (Accounting and Finance)
-                </li>
-                <li>
-                  <span className="font-light">International in Business</span>{" "}
-                  (Human Resource Management)
-                </li>
-              </ul>
-            </div>
-
-            <ExloreCoursesItem symbol={<Plus />}>Foundation</ExloreCoursesItem>
-            <ExloreCoursesItem symbol={<Plus />}>
-              Management and Leadership
-            </ExloreCoursesItem>
-            <ExloreCoursesItem symbol={<Plus />}>
-              Teacher Education
-            </ExloreCoursesItem>
-            <ExloreCoursesItem symbol={<Plus />}>
-              Certification Programs
-            </ExloreCoursesItem>
-          </div>
-
-          <img src={ImageExploreCourses} className="max-w-[462px]" />
-        </div>
+      <div className="grid grid-cols-3 py-[93px] px-[225px] bg-[#F5FAFC] place-items-center">
+        <InquiryItem
+          img={
+            <>
+              <img src={IconDeMontLogo} />
+              <img src={IconPhoneCircled} />
+            </>
+          }
+          header="Got question? Let's talk!"
+          linkLabel="Contact Us"
+        >
+          +971 4 580 4285
+        </InquiryItem>
+        <InquiryItem
+          img={<img src={IconSearch} />}
+          header="Want to know more?"
+          linkLabel="Learn More"
+        >
+          Let's find out!
+        </InquiryItem>
+        <InquiryItem
+          img={<img src={IconChat} />}
+          header="We are here to guide you"
+          linkLabel="Chat with an Admission Counselor"
+        >
+          +971 58 625 0566
+        </InquiryItem>
       </div>
     </>
   );
 }
 
-type ExploreCoursesItemProps = {
+type InquiryItemProps = {
+  img: React.ReactNode;
+  header: string;
   children: string;
-  symbol: React.ReactNode;
+  linkLabel: string;
 };
 
-function ExloreCoursesItem({ children, symbol }: ExploreCoursesItemProps) {
+function InquiryItem({ img, header, children, linkLabel }: InquiryItemProps) {
   return (
-    <div className="w-full space-y-[25px]">
-      <div className="flex justify-between items-center text-white ps-[115px] pe-[32px] w-full h-[57px] max-w-[802px] bg-[#0C2D46] rounded-e-[25px]">
-        <h1 className="text-[20px]">{children}</h1>
-        <button className="h-full cursor-pointer">{symbol}</button>
+    <div className="w-[237px] h-[213px] gap-[25px] font-[20px] flex flex-col items-center">
+      <div className="flex items-center gap-[12px]">{img}</div>
+      <div className="space-y-[10px] text-center">
+        <p>{header}</p>
+        <p className="font-extralight">{children}</p>
       </div>
+
+      <a href="#" className="text-center">
+        {linkLabel}
+      </a>
     </div>
   );
 }

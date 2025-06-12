@@ -1,4 +1,4 @@
-import IconLogo from "@assets/icons/logo.svg";
+import IconLogo from "@assets/icons/demont-logo-full.svg";
 import { ArrowDown, ArrowUp } from "../svg/Arrows";
 
 type NavProps = {
