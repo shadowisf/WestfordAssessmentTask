@@ -28,6 +28,10 @@ export default function App() {
       <MinimumEligibility />
 
       <RelatedCourses />
+
+      <div className="">
+
+      </div>
     </>
   );
 }
