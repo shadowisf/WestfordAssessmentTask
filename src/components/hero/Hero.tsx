@@ -1,5 +1,5 @@
 import ImageHero from "@assets/images/hero.png";
-import { ArrowLeft } from "./svg/Arrows";
+import { ArrowLeft } from "../svg/Arrows";
 import ImagePearson from "@assets/images/pearson-logo.png";
 import IconClock from "@assets/icons/clock.svg";
 import IconGraphUp from "@assets/icons/graph-up.svg";
