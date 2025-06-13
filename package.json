@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
+    "@types/flubber": "^0.4.0",
+    "flubber": "^0.4.2",
+    "framer-motion": "^12.17.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-phone-number-input": "^3.4.12",

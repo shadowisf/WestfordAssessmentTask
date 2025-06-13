@@ -8,9 +8,9 @@ import RelatedCourses from "./components/7-related-courses/_RelatedCourses";
 import AcademicPartners from "./components/8-academic-partners/_AcademicPartners";
 import ExploreCourses from "./components/9-explore-courses/_ExploreCourses";
 import IconDeMontLogo from "@assets/icons/demont-logo.svg";
-import IconPhoneCircled from "@assets/icons/phone-circled.svg";
-import IconSearch from "@assets/icons/search.svg";
-import IconChat from "@assets/icons/chat.svg";
+import Search from "./components/svg/Search";
+import AnimatedPhoneCircled from "./components/svg/PhoneCircled";
+import AnimatedChat from "./components/svg/Chat";
 
 export default function App() {
   const [applyNowHovered, setApplyNowHovered] = useState(false);
@@ -44,7 +44,7 @@ export default function App() {
           img={
             <>
               <img src={IconDeMontLogo} />
-              <img src={IconPhoneCircled} />
+              <AnimatedPhoneCircled />
             </>
           }
           header="Got question? Let's talk!"
@@ -53,14 +53,14 @@ export default function App() {
           +971 4 580 4285
         </InquiryItem>
         <InquiryItem
-          img={<img src={IconSearch} />}
+          img={<Search />}
           header="Want to know more?"
           linkLabel="Learn More"
         >
           Let's find out!
         </InquiryItem>
         <InquiryItem
-          img={<img src={IconChat} />}
+          img={<AnimatedChat />}
           header="We are here to guide you"
           linkLabel="Chat with an Admission Counselor"
         >
@@ -80,13 +80,12 @@ type InquiryItemProps = {
 
 function InquiryItem({ img, header, children, linkLabel }: InquiryItemProps) {
   return (
-    <div className="w-[237px] h-[213px] gap-[25px] font-[20px] flex flex-col items-center">
-      <div className="flex items-center gap-[12px]">{img}</div>
+    <div className="w-[237px] h-[213px] gap-[25px] font-[20px] flex flex-col items-center transition">
+      <div className="flex items-center justify-center gap-[12px]">{img}</div>
       <div className="space-y-[10px] text-center">
         <p>{header}</p>
         <p className="font-extralight">{children}</p>
       </div>
-
       <a href="#" className="text-center">
         {linkLabel}
       </a>
