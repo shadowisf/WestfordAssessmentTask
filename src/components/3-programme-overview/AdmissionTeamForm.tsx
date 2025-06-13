@@ -2,18 +2,13 @@ import ImageWeirdContainer from "@assets/images/weird-container.svg";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { ArrowBottomMinimal, ArrowRightMinimal } from "../svg/ArrowsMinimal";
+import { useState } from "react";
 
-type AdmissionTeamFormProps = {
-  phone: string | undefined;
-  setPhone: (phone: string | undefined) => void;
-};
+export default function AdmissionTeamForm() {
+  const [phone, setPhone] = useState<string | undefined>(undefined);
 
-export default function AdmissionTeamForm({
-  phone,
-  setPhone,
-}: AdmissionTeamFormProps) {
   return (
-    <div className="space-y-[26px]">
+    <div className="hidden xl:block space-y-[26px]">
       <section className="text-right me-[45px]">
         <h1 className="text-[40px]">
           <span className="text-[#ECA22D]">Talk</span> to Our

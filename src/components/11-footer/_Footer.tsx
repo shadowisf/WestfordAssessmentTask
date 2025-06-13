@@ -6,16 +6,11 @@ import Submit from "../svg/Submit";
 import IconDeMontLogoAlt from "@assets/icons/demont-logo-full-alt.png";
 import IconLocation from "@assets/icons/location.svg";
 import CopyrightLabel from "./CopyrightLabel";
+import { useState } from "react";
 
-type FooterProps = {
-  footerCheckboxChecked: boolean;
-  setFooterCheckboxChecked: (value: boolean) => void;
-};
+export default function Footer() {
+  const [footerCheckboxChecked, setFooterCheckboxChecked] = useState(false);
 
-export default function Footer({
-  footerCheckboxChecked,
-  setFooterCheckboxChecked,
-}: FooterProps) {
   return (
     <>
       <div className="pt-[83px] pb-[107px] px-[42px] bg-[#0C2D46] text-white">

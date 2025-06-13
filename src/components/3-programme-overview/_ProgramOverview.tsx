@@ -1,24 +1,17 @@
 import IconBrochure from "@assets/icons/brochure.svg";
 import IconCurlyArrow from "@assets/icons/curly-arrow.svg";
 import AdmissionTeamForm from "./AdmissionTeamForm";
+import { useState } from "react";
+import AdmissionTeamFormModal from "./AdmissionTeamFormModal";
 
-type ProgrammeOverviewProps = {
-  applyNowHovered: boolean;
-  setApplyNowHovered: (hovered: boolean) => void;
-  phone: string | undefined;
-  setPhone: (phone: string | undefined) => void;
-};
+export default function ProgrammeOverview() {
+  const [applyNowHovered, setApplyNowHovered] = useState(false);
+  const [admissionFormModalOpen, setAdmissionFormModalOpen] = useState(false);
 
-export default function ProgrammeOverview({
-  applyNowHovered,
-  setApplyNowHovered,
-  phone,
-  setPhone,
-}: ProgrammeOverviewProps) {
   return (
-    <div className="ms-[45px] my-[64px] flex justify-between">
+    <div className="my-[64px] flex justify-between">
       <div className="space-y-[91px] text-[16px]">
-        <section className="flex gap-[143px]">
+        <section className="mx-[45px] flex gap-[100px] 2xl:gap-[143px]">
           {/* get brochure link */}
           <a
             href="#"
@@ -35,10 +28,22 @@ export default function ProgrammeOverview({
           </a>
 
           {/* apply now link */}
-          <div className="relative w-[500px] flex items-center">
+          <div className="relative 2xl:w-[500px] flex items-center">
             <a
               href="#"
-              className={`flex flex-col transition-transform duration-300 ease-out ${
+              className={`hidden 2xl:flex flex-col transition-transform duration-300 ease-out ${
+                applyNowHovered ? "translate-x-2" : ""
+              }`}
+              onMouseEnter={() => setApplyNowHovered(true)}
+              onMouseLeave={() => setApplyNowHovered(false)}
+            >
+              <span className="text-center ms-[20px] me-[6px]">Apply Now</span>
+              <span className="border-[2.5px] border-[#0C2D46] rounded" />
+            </a>
+
+            <a
+              onClick={() => setAdmissionFormModalOpen(true)}
+              className={`flex 2xl:hidden flex-col transition-transform duration-300 ease-out ${
                 applyNowHovered ? "translate-x-2" : ""
               }`}
               onMouseEnter={() => setApplyNowHovered(true)}
@@ -50,14 +55,14 @@ export default function ProgrammeOverview({
 
             <img
               src={IconCurlyArrow}
-              className={`absolute w-[500px] translate-x-[113px] translate-y-[28px] pointer-events-none transition-opacity duration-300 ease-out z-[-1] ${
+              className={`hidden 2xl:block absolute w-[500px] translate-x-[113px] translate-y-[28px] pointer-events-none transition-opacity duration-300 ease-out z-[-1] ${
                 applyNowHovered ? "opacity-100" : "opacity-0"
               }`}
             />
           </div>
         </section>
 
-        <section>
+        <section className="mx-[45px]">
           <h1 className="text-[40px]">
             <span>Programme</span>{" "}
             <span className="text-[#ECA22D]">Overview</span>
@@ -65,7 +70,7 @@ export default function ProgrammeOverview({
 
           <br />
 
-          <p className="font-light text-[16px] w-[814px]">
+          <p className="font-light text-[16px] xl:w-[814px]">
             The Higher National Diploma International (HND) in Computing with a
             specialization in Software Engineering is a comprehensive program
             designed to equip students with the knowledge, skills, and practical
@@ -77,7 +82,7 @@ export default function ProgrammeOverview({
 
           <br />
 
-          <p className="font-light text-[16px] w-[814px]">
+          <p className="font-light text-[16px] xl:w-[814px]">
             The Higher National Diploma International in Computing with a
             specialization in Software Engineering offers a comprehensive
             education in the ever-evolving field of software development.
@@ -91,7 +96,12 @@ export default function ProgrammeOverview({
         </section>
       </div>
 
-      <AdmissionTeamForm phone={phone} setPhone={setPhone} />
+      <AdmissionTeamFormModal
+        admissionTeamFormModalOpen={admissionFormModalOpen}
+        setAdmissionTeamFormModalOpen={setAdmissionFormModalOpen}
+      />
+
+      <AdmissionTeamForm />
     </div>
   );
 }

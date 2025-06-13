@@ -119,7 +119,7 @@ export default function Hero() {
         <div className="absolute inset-0">
           <img
             src={ImageHero}
-            className="w-full h-screen object-cover brightness-25"
+            className="w-full h-full object-cover brightness-25"
           />
         </div>
 

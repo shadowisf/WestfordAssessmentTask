@@ -3,6 +3,7 @@ import { ArrowDown, ArrowUp } from "../svg/Arrows";
 import IconHamburger from "@assets/icons/hamburger.svg";
 import { useState } from "react";
 import MobileNavModal from "./MobileNavModal";
+import ProgramsModal from "./ProgramsModal";
 
 export default function Nav() {
   const [deMontPlusOpen, setDeMontPlusOpen] = useState(false);
@@ -60,6 +61,11 @@ export default function Nav() {
           </button>
         </div>
       </nav>
+
+      <ProgramsModal
+        programsOpen={programsOpen}
+        setProgramsOpen={setProgramsOpen}
+      />
 
       <MobileNavModal
         isOpen={mobileNavOpen}

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Hero from "./components/2-hero/_Hero";
 import ProgrammeOverview from "./components/3-programme-overview/_ProgramOverview";
 import TopSkillsYouWillLearn from "./components/4-top-skills/_TopSkillSYouWillLearn";
@@ -11,39 +10,27 @@ import InquiryPanel from "./components/10-inquiry-panel/_InquiryPanel";
 import Footer from "./components/11-footer/_Footer";
 
 export default function App() {
-  const [applyNowHovered, setApplyNowHovered] = useState(false);
-  const [formPhone, setFormPhone] = useState<string | undefined>(undefined);
-  const [footerCheckboxChecked, setFooterCheckboxChecked] = useState(false);
-
   return (
     <>
       <Hero />
 
-      {/* <ProgrammeOverview
-        applyNowHovered={applyNowHovered}
-        setApplyNowHovered={setApplyNowHovered}
-        phone={formPhone}
-        setPhone={setFormPhone}
-      />
+      <ProgrammeOverview />
 
-      <TopSkillsYouWillLearn />
+      {/* <TopSkillsYouWillLearn /> */}
 
-      <JobOpportunities />
+      {/* <JobOpportunities /> */}
 
-      <MinimumEligibility />
+      {/* <MinimumEligibility /> */}
 
-      <RelatedCourses />
+      {/* <RelatedCourses /> */}
 
-      <AcademicPartners />
+      {/* <AcademicPartners /> */}
 
-      <ExploreCourses />
+      {/* <ExploreCourses /> */}
 
-      <InquiryPanel />
+      {/* <InquiryPanel /> */}
 
-      <Footer
-        footerCheckboxChecked={footerCheckboxChecked}
-        setFooterCheckboxChecked={setFooterCheckboxChecked}
-      /> */}
+      {/* <Footer /> */}
     </>
   );
 }
