@@ -3,9 +3,9 @@ import BulletPoint from "../svg/BulletPoint";
 
 export default function JobOpportunities() {
   return (
-    <div className="relative p-[42px] flex">
+    <div className="relative p-[42px] flex md:text-black text-white">
       {/* left container */}
-      <div className="space-y-[40px] w-[814px]">
+      <div className="space-y-[40px] md:w-[400px] lg:w-[600px] xl:w-[814px]">
         <section className="space-y-[20px]">
           <h1 className="text-[40px]">
             <span className="text-[#ECA22D]">Job</span> Opportunities
@@ -39,7 +39,7 @@ export default function JobOpportunities() {
       {/* background image */}
       <img
         src={ImageJobOpportunities}
-        className="absolute right-0 top-0 h-full w-auto object-cover z-[-1]"
+        className="absolute right-0 top-0 h-full w-auto object-cover z-[-1] brightness-50 bg-gray-100 md:brightness-100 md:bg-transparent "
       />
     </div>
   );
@@ -48,7 +48,6 @@ export default function JobOpportunities() {
 function JobOpportunityItem({ children }: { children: string }) {
   return (
     <div className="flex items-center gap-[20px] font-light text-[16px]">
-      {/* <div className="w-[14px] h-[1px] border-[3px] border-[#879DA5] rounded" /> */}
       <BulletPoint className="w-[14px] h-[8px] text-[#879DA5]" />
       {children}
     </div>
