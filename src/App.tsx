@@ -19,7 +19,7 @@ export default function App() {
     <>
       <Hero />
 
-      <ProgrammeOverview
+      {/* <ProgrammeOverview
         applyNowHovered={applyNowHovered}
         setApplyNowHovered={setApplyNowHovered}
         phone={formPhone}
@@ -43,7 +43,7 @@ export default function App() {
       <Footer
         footerCheckboxChecked={footerCheckboxChecked}
         setFooterCheckboxChecked={setFooterCheckboxChecked}
-      />
+      /> */}
     </>
   );
 }
