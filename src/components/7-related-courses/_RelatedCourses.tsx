@@ -17,7 +17,7 @@ export default function RelatedCourses() {
         Related <span className="text-[#ECA22D]">Courses</span>
       </h1>
 
-      <section className="grid grid-cols-4 gap-[40px] place-items-center">
+      <section className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-[40px] place-items-center">
         <RelatedCoursesItem
           img={ImageHNDCybersecurity}
           duration="24 Months"

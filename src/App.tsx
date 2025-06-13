@@ -22,7 +22,7 @@ export default function App() {
 
       <MinimumEligibility />
 
-      {/* <RelatedCourses /> */}
+      <RelatedCourses />
 
       {/* <AcademicPartners /> */}
 
