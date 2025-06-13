@@ -5,16 +5,11 @@ import ImageCMILevel5 from "@assets/images/cmi-level-5-in-management-and-leaders
 import ImageCertificationPrograms from "@assets/images/certification-programs.png";
 import ImageCPD from "@assets/images/continuing-professional-development-cpd.png";
 import { ArrowRightMinimal } from "../svg/ArrowsMinimal";
+import { useState } from "react";
 
-type ProgramsModalProps = {
-  programsOpen: boolean;
-  setProgramsOpen: (value: boolean) => void;
-};
+export default function ProgramsModal() {
+  const [programsOpen, setProgramsOpen] = useState(false);
 
-export default function ProgramsModal({
-  programsOpen,
-  setProgramsOpen,
-}: ProgramsModalProps) {
   return (
     /* programs modal container */
     <div

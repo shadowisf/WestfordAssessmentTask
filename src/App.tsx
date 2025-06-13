@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <>
-      {/* <Hero />
+      <Hero />
 
       <ProgrammeOverview
         applyNowHovered={applyNowHovered}
@@ -43,7 +43,7 @@ export default function App() {
       <Footer
         footerCheckboxChecked={footerCheckboxChecked}
         setFooterCheckboxChecked={setFooterCheckboxChecked}
-      /> */}
+      />
     </>
   );
 }
