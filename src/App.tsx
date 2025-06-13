@@ -1,6 +1,6 @@
 import Hero from "./components/2-hero/_Hero";
 import ProgrammeOverview from "./components/3-programme-overview/_ProgramOverview";
-import TopSkillsYouWillLearn from "./components/4-top-skills/_TopSkillSYouWillLearn";
+import TopSkills from "./components/4-top-skills/_TopSkills";
 import JobOpportunities from "./components/5-job-opportunities/_JobOpportunities";
 import MinimumEligibility from "./components/6-minimum-eligibility/_MinimumEligibility";
 import RelatedCourses from "./components/7-related-courses/_RelatedCourses";
@@ -16,7 +16,7 @@ export default function App() {
 
       <ProgrammeOverview />
 
-      {/* <TopSkillsYouWillLearn /> */}
+      <TopSkills />
 
       {/* <JobOpportunities /> */}
 
