@@ -12,7 +12,7 @@ export default function Nav() {
   return (
     /* header container */
     <>
-      <nav className="h-[111px] text-[16px] relative z-50 sticky top-[45px]">
+      <nav className="h-[111px] text-[16px] relative z-50 sticky top-[68px]  sm:top-[45px]">
         {/* header wrapper */}
         <div className="h-[81px] bg-[#F6F6F6] flex justify-between">
           {/* left container */}

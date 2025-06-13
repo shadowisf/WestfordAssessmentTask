@@ -68,58 +68,101 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* tablet screen view */}
+      <div className="hidden lg:block xl:hidden">
+        <div className="flex justify-between gap-4">
+          <div className="mt-[40px] space-y-8">
+            <a href="#" className="flex items-center gap-2 ms-4">
+              <ArrowLeft />
+              <span>Back to all Programs</span>
+            </a>
+
+            <img
+              className="w-[200px] h-auto p-4 bg-[#F6F6F6] rounded-e-[40px]"
+              src={ImagePearson}
+            />
+
+            <section className="space-y-1 ms-4">
+              <h1 className="font-light text-2xl leading-snug">
+                Higher National Diploma International
+              </h1>
+              <h2 className="font-light text-xl leading-snug">
+                In Computing (Software Engineering)
+              </h2>
+            </section>
+
+            <section className="bg-[#0C2D46] text-white py-5 px-6 rounded-xl flex flex-wrap justify-center gap-6 ms-4">
+              <StatItem img={IconClock} header="Duration">
+                24 months
+              </StatItem>
+              <StatItem img={IconGraphUp} header="Course Level">
+                Level 5
+              </StatItem>
+              <StatItem img={IconStar} header="Credits">
+                240
+              </StatItem>
+              <StatItem img={IconBlocks} header="Modules">
+                15
+              </StatItem>
+            </section>
+          </div>
+
+          <img
+            src={ImageHero}
+            className="w-full max-w-[500px] h-full object-contain"
+          />
+        </div>
+      </div>
+
       {/* mobile screen view */}
-      <div className="x:hidden">
-        <div className="flex justify-between">
-          <a href="#" className="flex items-center gap-2">
+      <div className="relative lg:hidden w-full h-screen text-white">
+        <div className="absolute inset-0">
+          <img
+            src={ImageHero}
+            className="w-full h-screen object-cover brightness-25"
+          />
+        </div>
+
+        <div className="relative pt-[50px] space-y-8">
+          <a href="#" className="flex items-center gap-2 text-white px-6">
             <ArrowLeft />
             <span>Back to all Programs</span>
           </a>
-          <img src={ImageHero} className="w-[250px] h-auto" alt="Hero" />
+
+          <div className="grid grid-cols-1 place-items-center gap-12">
+            <img
+              className="w-[180px] p-4 bg-[#F6F6F6] rounded-[40px]"
+              src={ImagePearson}
+              alt="Pearson Logo"
+            />
+
+            {/* hero text */}
+            <section className="space-y-1 px-6 text-center">
+              <h1 className="font-light text-2xl leading-snug">
+                Higher National Diploma International
+              </h1>
+              <h2 className="font-light text-xl leading-snug">
+                In Computing (Software Engineering)
+              </h2>
+            </section>
+
+            {/* stats */}
+            <section className="w-full max-w-[300px] bg-[#0C2D46] bg-opacity-90 py-5 mx-6 px-6 rounded-xl flex flex-col gap-4">
+              <StatItem img={IconClock} header="Duration">
+                24 months
+              </StatItem>
+              <StatItem img={IconGraphUp} header="Course Level">
+                Level 5
+              </StatItem>
+              <StatItem img={IconStar} header="Credits">
+                240
+              </StatItem>
+              <StatItem img={IconBlocks} header="Modules">
+                15
+              </StatItem>
+            </section>
+          </div>
         </div>
-        <img
-          className="w-[200px] h-auto p-4 bg-[#F6F6F6] rounded-e-[40px]"
-          src={ImagePearson}
-          alt="Pearson Logo"
-        />
-      </div>
-
-      <div className="xl:hidden relative flex items-start justify-between">
-        {/* left container */}
-        <div className="w-full mt-8 text-[16px] px-6 space-y-10">
-          {/* back link */}
-
-          {/* pearson logo */}
-
-          {/* hero text */}
-          <section className="space-y-1">
-            <h1 className="font-light text-2xl leading-snug">
-              Higher National Diploma International
-            </h1>
-            <h2 className="font-light text-xl leading-snug">
-              In Computing (Software Engineering)
-            </h2>
-          </section>
-
-          {/* stats grid */}
-          <section className="bg-[#0C2D46] text-white py-5 px-6 rounded-xl flex flex-col gap-6">
-            <StatItem img={IconClock} header="Duration">
-              24 months
-            </StatItem>
-            <StatItem img={IconGraphUp} header="Course Level">
-              Level 5
-            </StatItem>
-            <StatItem img={IconStar} header="Credits">
-              240
-            </StatItem>
-            <StatItem img={IconBlocks} header="Modules">
-              15
-            </StatItem>
-          </section>
-        </div>
-
-        {/* hero image */}
-        <div className="w-full h-auto relative"></div>
       </div>
     </>
   );
