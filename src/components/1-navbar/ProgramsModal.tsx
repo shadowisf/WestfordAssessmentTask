@@ -26,7 +26,7 @@ export default function ProgramsModal({
       onClick={() => setProgramsOpen(false)}
     >
       {/* cards grid */}
-      <section className="my-[77px] mx-[36px] grid grid-cols-6 gap-[30px]">
+      <section className="my-[77px] mx-[36px] grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-[30px] place-items-center">
         <ZoomCard image={ImageHigherNationalDiploma}>
           Higher National Diploma
         </ZoomCard>

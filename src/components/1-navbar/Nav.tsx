@@ -1,5 +1,6 @@
 import IconLogo from "@assets/icons/demont-logo-full.svg";
 import { ArrowDown, ArrowUp } from "../svg/Arrows";
+import IconHamburger from "@assets/icons/hamburger.svg";
 
 type NavProps = {
   programsOpen: boolean;
@@ -20,14 +21,14 @@ export default function Nav({
       {/* header wrapper */}
       <div className="h-[81px] bg-[#F6F6F6] flex justify-between">
         {/* left container */}
-        <section className="h-[111px] px-[23px] py-[20px] bg-[#F6F6F6] rounded-b-[40px] ms-[21px]">
-          <a href="#" className="w-[234px] h-[71px]">
-            <img src={IconLogo} />
+        <section className="h-[111px] px-[23px] py-[20px] bg-[#F6F6F6] rounded-b-[40px] ms-2 xl:ms-[21px] flex-shrink-0">
+          <a href="#">
+            <img src={IconLogo} className="w-[234px] h-[71px] " />
           </a>
         </section>
 
         {/* right container */}
-        <section className="flex items-center divide-x divide-[rgba(0,0,0,0.2)] me-[42px] whitespace-nowrap">
+        <section className="hidden xl:flex items-center divide-x divide-[rgba(0,0,0,0.2)] me-[42px] whitespace-nowrap">
           <NavRightItem href="#">About Us</NavRightItem>
           <NavRightItemWithArrow
             href="#"
@@ -55,6 +56,10 @@ export default function Nav({
           <NavRightItem href="#">Business Challenge</NavRightItem>
           <NavRightItem href="#">Life at DeMont</NavRightItem>
         </section>
+
+        <button className="visible xl:hidden cursor-pointer me-8">
+          <img src={IconHamburger} className="w-[32px]" />
+        </button>
       </div>
     </nav>
   );
