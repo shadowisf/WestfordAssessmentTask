@@ -8,7 +8,7 @@ export default function MinimumEligibility() {
         <h1 className="text-[40px]">
           <span className="text-[#ECA22D]">Who</span> Is This Programme For?
         </h1>
-        <p className="font-light text-[16px] w-[814px]">
+        <p className="font-light text-[16px] max-w-[814px]">
           The Higher National Diploma International (HND) in Computing with a
           specialization in Software Engineering is designed for a diverse range
           of individuals who are interested in pursuing a career in the field of
@@ -35,7 +35,7 @@ export default function MinimumEligibility() {
         </div>
 
         <div className="space-y-[20px]">
-          <section className="flex items-center gap-[24px]">
+          <section className="flex flex-wrap items-center gap-[24px]">
             <h1 className="font-extralight text-[40px]">Awarding Body:</h1>
             <img className="w-[189px]" src={ImagePearsonLogo} />
           </section>
@@ -52,11 +52,11 @@ export default function MinimumEligibility() {
           </p>
         </div>
 
-        <div className="flex gap-[135px]">
+        <div className="flex flex-wrap xl:flex-nowrap gap-[80px] xl:gap-[135px]">
           <section className="space-y-[20px]">
             <h1 className="font-extralight text-[40px]">Core Modules</h1>
 
-            <div className="p-[45px] grid grid-cols-1 justfy-between border border-[#E6E6E6] rounded-[25px] min-w-[679px]">
+            <div className="p-[45px] grid grid-cols-1 justfy-between border border-[#E6E6E6] rounded-[25px] xl:min-w-[679px]">
               <section className="grid grid-cols-2 pb-[20px] text-[24px]">
                 <h2 className="justify-self-start">Module Name</h2>
                 <h2 className="justify-self-end">Credit</h2>

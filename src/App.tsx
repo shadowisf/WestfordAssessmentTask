@@ -20,7 +20,7 @@ export default function App() {
 
       <JobOpportunities />
 
-      {/* <MinimumEligibility /> */}
+      <MinimumEligibility />
 
       {/* <RelatedCourses /> */}
 

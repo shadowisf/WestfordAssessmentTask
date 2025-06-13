@@ -11,7 +11,7 @@ export default function ProgrammeOverview() {
   return (
     <div className="my-[64px] flex justify-between">
       <div className="space-y-[91px] text-[16px]">
-        <section className="mx-[45px] flex gap-[100px] 2xl:gap-[143px]">
+        <section className="mx-[45px] flex flex-wrap justify-center xl:justify-start gap-[50px] xl:gap-[100px] 2xl:gap-[143px]">
           {/* get brochure link */}
           <a
             href="#"
