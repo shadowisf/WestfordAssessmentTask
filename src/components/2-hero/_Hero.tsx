@@ -6,6 +6,7 @@ import IconGraphUp from "@assets/icons/graph-up.svg";
 import IconStar from "@assets/icons/star.svg";
 import IconBlocks from "@assets/icons/blocks.svg";
 import StatsItem from "./StatsItem";
+import { ArrowLeftLongerB } from "../svg/ArrowsLonger";
 
 export default function Hero() {
   return (
@@ -17,8 +18,31 @@ export default function Hero() {
           {/* left container */}
           <div className="space-y-[39px]">
             {/* back link */}
-            <a href="#" className="flex items-center gap-[5px] ms-[43px]">
-              <ArrowLeft />
+            <a
+              href="#"
+              className="ps-12 group flex items-center gap-2 relative"
+            >
+              <span className="relative inline-flex items-center">
+                <span
+                  className="
+        inline-block relative z-10
+        transition-transform duration-300 ease-out
+        translate-x-0 group-hover:-translate-x-2
+      "
+                >
+                  <ArrowLeftLongerB />
+                </span>
+                <span
+                  className="
+        absolute w-[21px] h-[21px] rounded-full bg-[#879DA5]
+        left-1/2 top-1/2 -translate-x-[27px] -translate-y-1/2 z-0
+        origin-center pointer-events-none
+        scale-0 opacity-0
+        group-hover:scale-100 group-hover:opacity-100
+        transition-transform transition-opacity duration-300 ease-out
+      "
+                />
+              </span>
               <span>Back to all Programs</span>
             </a>
 
@@ -73,8 +97,31 @@ export default function Hero() {
       <div className="hidden lg:block xl:hidden">
         <div className="flex justify-between gap-4">
           <div className="mt-[40px] space-y-8">
-            <a href="#" className="flex items-center gap-2 ms-4">
-              <ArrowLeft />
+            <a
+              href="#"
+              className="ps-12 group flex items-center gap-2 relative"
+            >
+              <span className="relative inline-flex items-center">
+                <span
+                  className="
+        inline-block relative z-10
+        transition-transform duration-300 ease-out
+        translate-x-0 group-hover:-translate-x-2
+      "
+                >
+                  <ArrowLeftLongerB />
+                </span>
+                <span
+                  className="
+        absolute w-[21px] h-[21px] rounded-full bg-[#879DA5]
+        left-1/2 top-1/2 -translate-x-[27px] -translate-y-1/2 z-0
+        origin-center pointer-events-none
+        scale-0 opacity-0
+        group-hover:scale-100 group-hover:opacity-100
+        transition-transform transition-opacity duration-300 ease-out
+      "
+                />
+              </span>
               <span>Back to all Programs</span>
             </a>
 
