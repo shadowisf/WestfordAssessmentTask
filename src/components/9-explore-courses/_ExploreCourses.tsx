@@ -4,8 +4,9 @@ import { Minus, Plus } from "../svg/Math";
 
 export default function ExploreCourses() {
   return (
-    <div className="pt-[69px] pb-[103px] space-y-[69px]">
-      <div className="px-[114px] flex items-center gap-[109px]">
+    <div className="relative pt-[69px] space-y-[69px]">
+      {/* Header Section */}
+      <div className="flex gap-[50px] flex-wrap xl:flex-nowrap items-center xl:gap-[109px] px-[42px] xl:px-[110px] text-black">
         <h1 className="text-[40px]">
           Explore <span className="text-[#ECA22D]">Our Courses</span>
         </h1>
@@ -14,7 +15,7 @@ export default function ExploreCourses() {
           <input
             type="search"
             placeholder="Search courses..."
-            className="w-full h-full py-[13px] px-[35px] rounded-s-[25px] focus:outline-none bg-[#F0F0F0] font-light text-[20px]"
+            className="w-full h-full py-[13px] px-[35px] rounded-s-[25px] focus:outline-none bg-[#F0F0F0] font-light text-[15px] xl:text-[20px]"
           />
           <button className="h-full rounded-e-[25px] bg-[#879DA5] px-[25px] text-white flex items-center justify-center hover:bg-[#0C2D46] transition-colors duration-300 ease-out cursor-pointer">
             <ArrowRightLongerA />
@@ -22,14 +23,16 @@ export default function ExploreCourses() {
         </div>
       </div>
 
-      <div className="flex gap-[176px] justify-between">
-        <div className="space-y-[35px]">
-          <div className="w-full space-y-[25px]">
+      {/* Content Section: Flex layout */}
+      <div className="relative overflow-hidden flex justify-between 2xl:flex-row gap-[100px] text-white xl:text-black">
+        {/* Left - Courses List */}
+        <div className="space-y-[35px] my-[42px] me-[42px]">
+          <div className="w-full space-y-[25px] ">
             <ExloreCoursesItem symbol={<Minus />}>
               Higher National Diploma
             </ExloreCoursesItem>
 
-            <ul className="ps-[140px] space-y-[15px] text-[20px] list-disc">
+            <ul className="px-[42px] xl:px-[140px] space-y-[15px] text-[15px] xl:text-[20px] list-disc">
               <li>
                 <span className="font-light">International In Computing</span>{" "}
                 (Software Engineering)
@@ -72,7 +75,10 @@ export default function ExploreCourses() {
           </ExloreCoursesItem>
         </div>
 
-        <img src={ImageExploreCourses} className="max-w-[462px]" />
+        <img
+          src={ImageExploreCourses}
+          className="absolute right-0 top-0 h-full w-full xl:w-[500px] object-cover z-[-1] brightness-50 bg-gray-100 xl:brightness-100 xl:bg-transparent"
+        />
       </div>
     </div>
   );
@@ -86,8 +92,8 @@ type ExploreCoursesItemProps = {
 function ExloreCoursesItem({ children, symbol }: ExploreCoursesItemProps) {
   return (
     <div className="w-full space-y-[25px]">
-      <div className="flex justify-between items-center text-white ps-[115px] pe-[32px] w-full h-[57px] max-w-[802px] bg-[#0C2D46] rounded-e-[25px]">
-        <h1 className="text-[20px]">{children}</h1>
+      <div className="flex justify-between items-center text-white ps-[42px] xl:ps-[115px] pe-[32px] w-full h-[57px] max-w-[802px] bg-[#0C2D46] rounded-e-[25px]">
+        <h1 className="text-[15px] xl:text-[20px]">{children}</h1>
         <button className="h-full cursor-pointer">{symbol}</button>
       </div>
     </div>

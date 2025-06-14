@@ -26,7 +26,7 @@ export default function App() {
 
       <AcademicPartners />
 
-      {/* <ExploreCourses /> */}
+      <ExploreCourses />
 
       {/* <InquiryPanel /> */}
 
