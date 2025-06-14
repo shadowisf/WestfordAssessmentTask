@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { ArrowBottomMinimal, ArrowRightMinimal } from "../svg/ArrowsMinimal";
 import AdmissionFormItem from "./AdmissionFormItem";
+import IconClose from "@assets/icons/close.svg";
+import AdmissionConfirmed from "./AdmissionConfirmed";
 
 type AdmissionModalProps = {
   admissionFormModalOpen: boolean;
@@ -14,50 +16,70 @@ export default function AdmissionFormModal({
   setAdmissionFormModalOpen,
 }: AdmissionModalProps) {
   const [phone, setPhone] = useState<string | undefined>(undefined);
+  const [admissionConfirmed, setAdmissionConfirmed] = useState(false);
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (admissionFormModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [admissionFormModalOpen]);
 
   return (
-    <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/25 transition-opacity duration-300 ease-out ${
-        admissionFormModalOpen
-          ? "opacity-100 pointer-events-auto"
-          : "opacity-0 pointer-events-none"
-      }`}
-    >
-      <div className="relative bg-white text-black rounded-xl w-[90%] max-w-[400px] shadow-lg">
-        <div className="relative mb-4 p-6">
-          <h1 className="text-[28px] leading-tight">
-            <span className="text-[#ECA22D]">Talk</span> to Our
-          </h1>
-          <h2 className="font-extralight text-[20px]">Admission Team</h2>
+    <>
+      <div
+        className={`fixed inset-0 z-50 flex items-center justify-center bg-black/25 transition-opacity duration-300 ease-out ${
+          admissionFormModalOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="relative bg-white text-black rounded-xl w-[90%] max-w-[400px] max-h-screen overflow-y-auto shadow-lg">
+          {/* Header */}
+          <div className="relative p-6 pb-4">
+            <h1 className="text-[28px] leading-tight">
+              <span className="text-[#ECA22D]">Talk</span> to Our
+            </h1>
+            <h2 className="font-extralight text-[20px]">Admission Team</h2>
 
-          {/* Close button */}
-          <button
-            onClick={() => setAdmissionFormModalOpen(false)}
-            className="absolute top-0 right-0 hover:text-black z-50 text-[20px] m-6 cursor-pointer"
-          >
-            ✕
-          </button>
-        </div>
+            <button
+              onClick={() => setAdmissionFormModalOpen(false)}
+              className="absolute top-0 right-0 hover:text-black z-50 text-[20px] m-6 cursor-pointer"
+            >
+              <img src={IconClose} alt="Close" />
+            </button>
+          </div>
 
-        <div className="relative overflow-hidden">
           {/* Form */}
-          <form className="relative font-medium text-[16px] space-y-6">
+          <form
+            className="flex flex-col font-medium text-[16px] space-y-6 px-6"
+            onSubmit={(e) => {
+              e.preventDefault();
+              setAdmissionFormModalOpen(false);
+              setAdmissionConfirmed(true);
+            }}
+          >
             <AdmissionFormItem
-              className="px-6 w-full"
+              className="w-full"
               placeholder="Enter your First & Last Names"
             >
               Name
             </AdmissionFormItem>
 
             <AdmissionFormItem
-              className="px-6 w-full"
+              className="w-full"
               placeholder="Enter your Email"
             >
               Email
             </AdmissionFormItem>
 
             {/* Interested Course */}
-            <div className="flex flex-col gap-[6px] px-6">
+            <div className="flex flex-col gap-[6px]">
               <label>Interested Course</label>
               <div className="relative">
                 <select
@@ -73,7 +95,7 @@ export default function AdmissionFormModal({
             </div>
 
             {/* Phone Input */}
-            <div className="flex flex-col gap-[6px] px-6">
+            <div className="flex flex-col gap-[6px]">
               <label>Phone</label>
               <PhoneInput
                 defaultCountry="AE"
@@ -88,7 +110,7 @@ export default function AdmissionFormModal({
             </div>
 
             {/* Submit Button */}
-            <div className="ps-6 mb-6">
+            <div className="pb-6">
               <button
                 type="submit"
                 className="group w-full h-[38px] px-[24px] cursor-pointer rounded-s-[15px] transition-colors duration-300 ease-out hover:bg-[#879DA5] bg-[#ECA22D] flex items-center gap-[9px] text-[16px] text-white font-semibold"
@@ -100,6 +122,11 @@ export default function AdmissionFormModal({
           </form>
         </div>
       </div>
-    </div>
+
+      <AdmissionConfirmed
+        admissionConfirmed={admissionConfirmed}
+        setAdmissionConfirmed={setAdmissionConfirmed}
+      />
+    </>
   );
 }
