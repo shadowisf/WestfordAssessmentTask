@@ -44,7 +44,7 @@ export default function AcademicPartners() {
             <img src={ImageNCFELogo} />
 
             {/* ncfe academic partner card */}
-            <div className="absolute inset-0 w-[287px] xl:w-[343px] h-[450px] rounded-[25px] bg-[#0C2D46] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
+            <div className="absolute inset-0 w-[287px] xl:w-[343px] h-[475px] xl:h-[450px] rounded-[25px] bg-[#0C2D46] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
               <div className="rounded-t-[25px] group-hover:p-[8px]  transition-padding duration-300 ease-out bg-[#0C2D46]">
                 <img
                   src={ImageNCFELogo}
