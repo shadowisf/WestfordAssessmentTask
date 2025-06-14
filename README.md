@@ -31,6 +31,7 @@ I first focused on the general aesthetic (color palettes) and the layout of the 
 * I faced difficulties in the course cards in the related courses section, especially on the hover of the "know more" since it's being overlapped by different components with z indexes. And also that the Tailwind group hover is already taken up by the parent components.
 * I faced difficulties in the academic partner cards, where the logo is supposed to be in motion when hovered
 * I faced difficulties in the hero component when making it mobile responsive. As a solution, I decided to create three separate views: desktop, tablet, and mobile view.
+* I implemented a drawer component under "explore other courses" section but the background seems to be bugging because of the layout.
 
 &emsp;
 
