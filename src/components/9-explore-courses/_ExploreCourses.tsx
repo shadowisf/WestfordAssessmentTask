@@ -1,9 +1,13 @@
+import { useState } from "react";
 import ImageExploreCourses from "@assets/images/explore-courses.png";
 import { ArrowRightLongerA } from "../svg/ArrowsLonger";
 import { Minus, Plus } from "../svg/Math";
 import ExloreCoursesItem from "./ExploreCoursesItem";
+import CourseDrawerSection from "./DrawerSection";
 
 export default function ExploreCourses() {
+  const [openHND, setOpenHND] = useState(true);
+
   return (
     <div className="relative pt-[69px] space-y-[69px]">
       {/* Header Section */}
@@ -29,39 +33,46 @@ export default function ExploreCourses() {
         {/* Left - Courses List */}
         <div className="space-y-[35px] my-[32px] me-[32px]">
           <div className="w-full space-y-[25px] ">
-            <ExloreCoursesItem symbol={<Minus />}>
-              Higher National Diploma
-            </ExloreCoursesItem>
-
-            <ul className="px-[32px] xl:px-[140px] space-y-[15px] text-[15px] xl:text-[20px] list-disc">
-              <li>
-                <span className="font-light">International In Computing</span>{" "}
-                (Software Engineering)
-              </li>
-              <li>
-                <span className="font-light">International in Computing</span>{" "}
-                (Cyber Security)
-              </li>
-              <li>
-                <span className="font-light">International In</span> Computing
-              </li>
-              <li>
-                <span className="font-light">International in Business</span>{" "}
-                (Business Management)
-              </li>
-              <li>
-                <span className="font-light">International in Business</span>{" "}
-                (Marketing)
-              </li>
-              <li>
-                <span className="font-light">International in Business</span>{" "}
-                (Accounting and Finance)
-              </li>
-              <li>
-                <span className="font-light">International in Business</span>{" "}
-                (Human Resource Management)
-              </li>
-            </ul>
+            {/* Only control the drawer, not the heading */}
+            <div
+              onClick={() => setOpenHND((v) => !v)}
+              className="cursor-pointer select-none"
+            >
+              <ExloreCoursesItem symbol={openHND ? <Minus /> : <Plus />}>
+                Higher National Diploma
+              </ExloreCoursesItem>
+            </div>
+            <CourseDrawerSection open={openHND}>
+              <ul className="px-[32px] xl:px-[140px] space-y-[15px] text-[15px] xl:text-[20px] list-disc">
+                <li>
+                  <span className="font-light">International In Computing</span>{" "}
+                  (Software Engineering)
+                </li>
+                <li>
+                  <span className="font-light">International in Computing</span>{" "}
+                  (Cyber Security)
+                </li>
+                <li>
+                  <span className="font-light">International In</span> Computing
+                </li>
+                <li>
+                  <span className="font-light">International in Business</span>{" "}
+                  (Business Management)
+                </li>
+                <li>
+                  <span className="font-light">International in Business</span>{" "}
+                  (Marketing)
+                </li>
+                <li>
+                  <span className="font-light">International in Business</span>{" "}
+                  (Accounting and Finance)
+                </li>
+                <li>
+                  <span className="font-light">International in Business</span>{" "}
+                  (Human Resource Management)
+                </li>
+              </ul>
+            </CourseDrawerSection>
           </div>
 
           <ExloreCoursesItem symbol={<Plus />}>Foundation</ExloreCoursesItem>
@@ -78,7 +89,7 @@ export default function ExploreCourses() {
 
         <img
           src={ImageExploreCourses}
-          className="absolute right-0 top-0 h-full w-full xl:w-[500px] object-cover z-[-1] brightness-50 bg-gray-100 xl:brightness-100 xl:bg-transparent"
+          className="absolute right-0 top-0 h-full w-full xl:w-[500px] object-cover z-[-1] brightness-50 bg-gray-100 xl:brightness-100 xl:bg-transparent transition-all duration-300 ease-out"
         />
       </div>
     </div>
