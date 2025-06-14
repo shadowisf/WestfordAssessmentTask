@@ -13,8 +13,8 @@ export default function Footer() {
 
   return (
     <>
-      <div className="pt-[83px] pb-[107px] px-[100px] xl:px-[42px] bg-[#0C2D46] text-white">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center items-start gap-[100px]  xl:gap-[50px]">
+      <div className="pt-[83px] pb-[107px] px-[42px] bg-[#0C2D46] text-white">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:place-items-center xl:items-start gap-[100px] xl:gap-[50px]">
           {/* very left container */}
           <div className="space-y-[55px] w-[282px]">
             <img src={IconDeMontLogoAlt} className="w-[282px]" />

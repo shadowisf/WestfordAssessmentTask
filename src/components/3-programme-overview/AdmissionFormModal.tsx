@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { ArrowBottomMinimal, ArrowRightMinimal } from "../svg/ArrowsMinimal";
@@ -17,18 +17,6 @@ export default function AdmissionFormModal({
 }: AdmissionModalProps) {
   const [phone, setPhone] = useState<string | undefined>(undefined);
   const [admissionConfirmed, setAdmissionConfirmed] = useState(false);
-
-  // Lock body scroll when modal is open
-  useEffect(() => {
-    if (admissionFormModalOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [admissionFormModalOpen]);
 
   return (
     <>
@@ -113,6 +101,12 @@ export default function AdmissionFormModal({
             <div className="pb-6">
               <button
                 type="submit"
+                onClick={(e) => {
+                  /* for testing purposes, disable form submission */
+                  e.preventDefault();
+                  setAdmissionFormModalOpen(false);
+                  setAdmissionConfirmed(true);
+                }}
                 className="group w-full h-[38px] px-[24px] cursor-pointer rounded-s-[15px] transition-colors duration-300 ease-out hover:bg-[#879DA5] bg-[#ECA22D] flex items-center gap-[9px] text-[16px] text-white font-semibold"
               >
                 Schedule a Call

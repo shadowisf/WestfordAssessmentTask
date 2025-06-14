@@ -162,7 +162,7 @@ export default function Hero() {
       </div>
 
       {/* mobile screen view */}
-      <div className="relative lg:hidden w-full h-screen text-white">
+      <div className="relative lg:hidden w-full h-screen text-white mb-[100px]">
         <div className="absolute inset-0">
           <img
             src={ImageHero}
