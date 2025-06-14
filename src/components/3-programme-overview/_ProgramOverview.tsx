@@ -1,8 +1,8 @@
 import IconBrochure from "@assets/icons/brochure.svg";
 import IconCurlyArrow from "@assets/icons/curly-arrow.svg";
-import AdmissionTeamForm from "./AdmissionTeamForm";
+import AdmissionForm from "./AdmissionForm";
 import { useState } from "react";
-import AdmissionTeamFormModal from "./AdmissionTeamFormModal";
+import AdmissionFormModal from "./AdmissionFormModal";
 
 export default function ProgrammeOverview() {
   const [applyNowHovered, setApplyNowHovered] = useState(false);
@@ -43,7 +43,7 @@ export default function ProgrammeOverview() {
 
             <a
               onClick={() => setAdmissionFormModalOpen(true)}
-              className={`flex 2xl:hidden flex-col transition-transform duration-300 ease-out ${
+              className={`cursor-pointer flex 2xl:hidden flex-col transition-transform duration-300 ease-out ${
                 applyNowHovered ? "translate-x-2" : ""
               }`}
               onMouseEnter={() => setApplyNowHovered(true)}
@@ -96,12 +96,12 @@ export default function ProgrammeOverview() {
         </section>
       </div>
 
-      <AdmissionTeamFormModal
-        admissionTeamFormModalOpen={admissionFormModalOpen}
-        setAdmissionTeamFormModalOpen={setAdmissionFormModalOpen}
+      <AdmissionFormModal
+        admissionFormModalOpen={admissionFormModalOpen}
+        setAdmissionFormModalOpen={setAdmissionFormModalOpen}
       />
 
-      <AdmissionTeamForm />
+      <AdmissionForm />
     </div>
   );
 }

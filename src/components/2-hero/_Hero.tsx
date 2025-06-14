@@ -5,6 +5,7 @@ import IconClock from "@assets/icons/clock.svg";
 import IconGraphUp from "@assets/icons/graph-up.svg";
 import IconStar from "@assets/icons/star.svg";
 import IconBlocks from "@assets/icons/blocks.svg";
+import StatsItem from "./StatsItem";
 
 export default function Hero() {
   return (
@@ -40,18 +41,18 @@ export default function Hero() {
 
             {/* stats grid */}
             <section className="py-[25px] px-[32px] xl:px-[42px] bg-[#0C2D46] text-white flex gap-[70px]">
-              <StatItem img={IconClock} header="Duration">
+              <StatsItem img={IconClock} header="Duration">
                 24 months
-              </StatItem>
-              <StatItem img={IconGraphUp} header="Course Level">
+              </StatsItem>
+              <StatsItem img={IconGraphUp} header="Course Level">
                 Level 5
-              </StatItem>
-              <StatItem img={IconStar} header="Credits">
+              </StatsItem>
+              <StatsItem img={IconStar} header="Credits">
                 240
-              </StatItem>
-              <StatItem img={IconBlocks} header="Modules">
+              </StatsItem>
+              <StatsItem img={IconBlocks} header="Modules">
                 15
-              </StatItem>
+              </StatsItem>
             </section>
           </div>
         </div>
@@ -92,18 +93,18 @@ export default function Hero() {
             </section>
 
             <section className="bg-[#0C2D46] text-white py-5 px-6 rounded-xl flex flex-wrap justify-center gap-6 ms-4">
-              <StatItem img={IconClock} header="Duration">
+              <StatsItem img={IconClock} header="Duration">
                 24 months
-              </StatItem>
-              <StatItem img={IconGraphUp} header="Course Level">
+              </StatsItem>
+              <StatsItem img={IconGraphUp} header="Course Level">
                 Level 5
-              </StatItem>
-              <StatItem img={IconStar} header="Credits">
+              </StatsItem>
+              <StatsItem img={IconStar} header="Credits">
                 240
-              </StatItem>
-              <StatItem img={IconBlocks} header="Modules">
+              </StatsItem>
+              <StatsItem img={IconBlocks} header="Modules">
                 15
-              </StatItem>
+              </StatsItem>
             </section>
           </div>
 
@@ -148,40 +149,22 @@ export default function Hero() {
 
             {/* stats */}
             <section className="w-full max-w-[300px] bg-[#0C2D46] bg-opacity-90 py-5 mx-6 px-6 rounded-xl flex flex-col gap-4">
-              <StatItem img={IconClock} header="Duration">
+              <StatsItem img={IconClock} header="Duration">
                 24 months
-              </StatItem>
-              <StatItem img={IconGraphUp} header="Course Level">
+              </StatsItem>
+              <StatsItem img={IconGraphUp} header="Course Level">
                 Level 5
-              </StatItem>
-              <StatItem img={IconStar} header="Credits">
+              </StatsItem>
+              <StatsItem img={IconStar} header="Credits">
                 240
-              </StatItem>
-              <StatItem img={IconBlocks} header="Modules">
+              </StatsItem>
+              <StatsItem img={IconBlocks} header="Modules">
                 15
-              </StatItem>
+              </StatsItem>
             </section>
           </div>
         </div>
       </div>
     </>
-  );
-}
-
-type StatItemProps = {
-  img: string;
-  header: string;
-  children: string;
-};
-
-function StatItem({ img, header, children }: StatItemProps) {
-  return (
-    <div className="flex items-center gap-[10px]">
-      <img src={img} />
-      <div className="space-y-[2px] text-[14px]">
-        <h3 className="font-light">{header}</h3>
-        <p>{children}</p>
-      </div>
-    </div>
   );
 }

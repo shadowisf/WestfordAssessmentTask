@@ -4,6 +4,7 @@ import ImageOOP from "@assets/images/oop.png";
 import ImageAgileDevelopment from "@assets/images/agile-development.png";
 import ImageSoftwareDocumentation from "@assets/images/software-documentation.png";
 import ImageCriticalThinking from "@assets/images/critical-thinking.png";
+import SkillItem from "./SkillItem";
 
 export default function TopSkills() {
   return (
@@ -27,20 +28,6 @@ export default function TopSkills() {
         </SkillItem>
         <SkillItem img={ImageCriticalThinking}>Critical Thinking</SkillItem>
       </section>
-    </div>
-  );
-}
-
-type SkillItemProps = {
-  img: string;
-  children: string;
-};
-
-function SkillItem({ img, children }: SkillItemProps) {
-  return (
-    <div className="flex items-center gap-[24px] w-[316px] h-[130px]">
-      <img src={img} className="w-[130px]" />
-      <span className="font-light text-[20px]">{children}</span>
     </div>
   );
 }

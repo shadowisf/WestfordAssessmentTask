@@ -3,8 +3,9 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { ArrowBottomMinimal, ArrowRightMinimal } from "../svg/ArrowsMinimal";
 import { useState } from "react";
+import AdmissionFormItem from "./AdmissionFormItem";
 
-export default function AdmissionTeamForm() {
+export default function AdmissionForm() {
   const [phone, setPhone] = useState<string | undefined>(undefined);
 
   return (
@@ -26,9 +27,13 @@ export default function AdmissionTeamForm() {
 
         {/* form */}
         <form className="relative font-medium p-[40px] text-[18px] space-y-[30px] w-[299px] h-[537px]">
-          <FormItem placeholder="Enter your First & Last Names">Name</FormItem>
+          <AdmissionFormItem placeholder="Enter your First & Last Names">
+            Name
+          </AdmissionFormItem>
 
-          <FormItem placeholder="Enter your Email">Email</FormItem>
+          <AdmissionFormItem placeholder="Enter your Email">
+            Email
+          </AdmissionFormItem>
 
           <div className="flex flex-col gap-[14px] w-[227px]">
             <label>Interested Course</label>
@@ -64,31 +69,15 @@ export default function AdmissionTeamForm() {
           <button
             type="submit"
             className="group w-[254px] h-[38px] ps-[34px] cursor-pointer rounded-s-[15px] transition-colors duration-300 ease-out hover:bg-[#879DA5] bg-[#ECA22D] flex items-center gap-[9px] text-[16px] text-white font-semibold"
+            onClick={(e) => {
+              e.preventDefault();
+            }}
           >
             Schedule a Call
             <ArrowRightMinimal className="text-black transition-transform duration-300 ease-out group-hover:text-white group-hover:translate-x-4" />
           </button>
         </form>
       </section>
-    </div>
-  );
-}
-
-type FormItemProps = {
-  children: string;
-  placeholder: string;
-};
-
-function FormItem({ children, placeholder }: FormItemProps) {
-  return (
-    <div className="flex flex-col gap-[14px] w-[227px]">
-      <label>{children}</label>
-      <input
-        type="text"
-        placeholder={placeholder}
-        className="font-light border-b border-[#D0D4D6] placeholder-[#6D6D6D] text-[16px] pb-[5px] focus:outline-none"
-        required
-      />
     </div>
   );
 }

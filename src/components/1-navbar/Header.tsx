@@ -1,6 +1,7 @@
 import IconEmail from "@assets/icons/email.svg";
 import IconPhone from "@assets/icons/phone.svg";
 import { ArrowRight } from "../svg/Arrows";
+import HeaderLeftItem from "./HeaderLeftItem";
 
 export default function Header() {
   return (
@@ -37,20 +38,5 @@ export default function Header() {
         </a>
       </section>
     </header>
-  );
-}
-
-type HeaderLeftItemProps = {
-  img: string;
-  href: string;
-  children: string;
-};
-
-function HeaderLeftItem({ img, href, children }: HeaderLeftItemProps) {
-  return (
-    <div className="flex items-center gap-[5px]">
-      <img src={img} />
-      <a href={href}>{children}</a>
-    </div>
   );
 }

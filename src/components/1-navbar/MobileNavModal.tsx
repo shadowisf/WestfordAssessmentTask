@@ -15,7 +15,7 @@ export default function MobileNavModal({
 }: MobileNavModalProps) {
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full bg-[#F6F6F6] text-[18px] text-black z-[999] transition-all duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 w-full h-full bg-[#0C2D46] text-[18px] text-white z-[999] transition-all duration-300 ease-in-out ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
@@ -23,7 +23,7 @@ export default function MobileNavModal({
         {/* close button */}
         <button
           onClick={onClose}
-          className="mb-6 text-right w-full text-[20px]"
+          className="cursor-pointer mb-6 text-right w-full text-[20px]"
         >
           ✕
         </button>
@@ -37,7 +37,7 @@ export default function MobileNavModal({
 
           <li>
             <button
-              className="flex items-center justify-between w-full"
+              className="cursor-pointer flex items-center justify-between w-full"
               onClick={() => setProgramsOpen(!programsOpen)}
             >
               <span>Programs</span>
