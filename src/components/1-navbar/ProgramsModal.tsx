@@ -4,7 +4,7 @@ import ImageTeacherEducation from "@assets/images/teacher-education.png";
 import ImageCMILevel5 from "@assets/images/cmi-level-5-in-management-and-leadership.png";
 import ImageCertificationPrograms from "@assets/images/certification-programs.png";
 import ImageCPD from "@assets/images/continuing-professional-development-cpd.png";
-import { ArrowRightMinimal } from "../svg/ArrowsMinimal";
+import ProgramsZoomCard from "./ProgramsZoomCard";
 
 type ProgramsModalProps = {
   programsOpen: boolean;
@@ -27,62 +27,23 @@ export default function ProgramsModal({
     >
       {/* cards grid */}
       <section className="my-[77px] mx-[36px] grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-[30px] place-items-center">
-        <ZoomCard image={ImageHigherNationalDiploma}>
+        <ProgramsZoomCard image={ImageHigherNationalDiploma}>
           Higher National Diploma
-        </ZoomCard>
-        <ZoomCard image={ImageFoundation}>Foundation</ZoomCard>
-        <ZoomCard image={ImageTeacherEducation}>Higher Education</ZoomCard>
-        <ZoomCard image={ImageCMILevel5}>
+        </ProgramsZoomCard>
+        <ProgramsZoomCard image={ImageFoundation}>Foundation</ProgramsZoomCard>
+        <ProgramsZoomCard image={ImageTeacherEducation}>
+          Higher Education
+        </ProgramsZoomCard>
+        <ProgramsZoomCard image={ImageCMILevel5}>
           CMI Level 5 in Management and Leadership
-        </ZoomCard>
-        <ZoomCard image={ImageCertificationPrograms}>
+        </ProgramsZoomCard>
+        <ProgramsZoomCard image={ImageCertificationPrograms}>
           Certification Programs
-        </ZoomCard>
-        <ZoomCard image={ImageCPD}>
+        </ProgramsZoomCard>
+        <ProgramsZoomCard image={ImageCPD}>
           Continuing Professional Development (CPD)
-        </ZoomCard>
+        </ProgramsZoomCard>
       </section>
     </div>
-  );
-}
-
-type ZoomCardProps = {
-  image: string;
-  children: string;
-};
-
-function ZoomCard({ image, children }: ZoomCardProps) {
-  return (
-    <a
-      href="#"
-      className="group relative w-[203px] h-[222px] rounded-[10px] overflow-hidden"
-      onClick={(e) => {
-        e.stopPropagation();
-      }}
-    >
-      {/* background Image */}
-      <img
-        src={image}
-        className="absolute inset-0 w-full h-full object-cover object-bottom transition-transform duration-300 ease-in-out origin-bottom group-hover:scale-[1.15]"
-      />
-
-      {/* text */}
-      <div className="absolute inset-0 p-[20px] pointer-events-none">
-        {children}
-      </div>
-
-      {/* arrow button */}
-      <button
-        className="absolute bottom-0 right-0 w-[41px] h-[28px] my-[20px] flex justify-center items-center rounded-s-[15px] cursor-pointer bg-[#ECA22D] text-black transition-colors duration-300 ease-in-out hover:bg-[#0C2D46] hover:text-white"
-        onMouseEnter={(e) => {
-          e.currentTarget.closest("a")?.classList.add("hovered");
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.closest("a")?.classList.remove("hovered");
-        }}
-      >
-        <ArrowRightMinimal />
-      </button>
-    </a>
   );
 }

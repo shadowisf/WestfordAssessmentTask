@@ -1,5 +1,7 @@
 import BulletPoint from "../svg/BulletPoint";
 import ImagePearsonLogo from "@assets/images/pearson-logo.png";
+import KeyLearningsItem from "./KeyLearningsItem";
+import CoreModulesItem from "./CoreModulesItem";
 
 export default function MinimumEligibility() {
   return (
@@ -125,28 +127,5 @@ export default function MinimumEligibility() {
         </div>
       </div>
     </>
-  );
-}
-
-function KeyLearningsItem({ children }: { children: string }) {
-  return (
-    <div className="flex gap-[20px] font-light text-[16px]">
-      <BulletPoint className="mt-[8px] w-[14px] h-[8px] text-[#ECA22D] flex-shrink-0" />
-      {children}
-    </div>
-  );
-}
-
-type CoreModulesItemProps = {
-  module: string;
-  children: string;
-};
-
-function CoreModulesItem({ module, children }: CoreModulesItemProps) {
-  return (
-    <div className="grid grid-cols-2 font-light text-[16px] border-b border-[#E6E6E6]">
-      <h2 className="justify-self-start pb-[3px]">{module}</h2>
-      <h2 className="justify-self-end">{children}</h2>
-    </div>
   );
 }

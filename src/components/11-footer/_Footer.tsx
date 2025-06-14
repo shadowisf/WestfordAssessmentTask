@@ -1,4 +1,3 @@
-import AnimatedBulletpoint from "../svg/AnimatedBulletpoint";
 import { CheckboxChecked, CheckboxUnchecked } from "../svg/Checkbox";
 import PhoneTollfree from "../svg/PhoneTollfree";
 import { Facebook, X, Instagram, LinkedIn } from "../svg/SocialMedia";
@@ -7,6 +6,7 @@ import IconDeMontLogoAlt from "@assets/icons/demont-logo-full-alt.png";
 import IconLocation from "@assets/icons/location.svg";
 import CopyrightLabel from "./CopyrightLabel";
 import { useState } from "react";
+import FooterListItem from "./FooterListItem";
 
 export default function Footer() {
   const [footerCheckboxChecked, setFooterCheckboxChecked] = useState(false);
@@ -139,19 +139,5 @@ export default function Footer() {
 
       <CopyrightLabel />
     </>
-  );
-}
-
-function FooterListItem({ children }: { children: string }) {
-  return (
-    <a
-      href="#"
-      className="flex items-center gap-[9px] group text-[16px] font-light"
-    >
-      <AnimatedBulletpoint className="group-hover:text-[#ECA22D] transition-colors duration-300 ease-out transition-transform duration-300 ease-out origin-left group-hover:scale-x-[1.66]" />
-      <span className="group-hover:translate-x-[6px] transition-transform duration-300 ease-out">
-        {children}
-      </span>
-    </a>
   );
 }

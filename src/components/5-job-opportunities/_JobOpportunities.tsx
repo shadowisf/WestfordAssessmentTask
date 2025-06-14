@@ -1,5 +1,5 @@
 import ImageJobOpportunities from "@assets/images/job-opportunities.png";
-import BulletPoint from "../svg/BulletPoint";
+import JobOpportunityItem from "./JobOpportunityItem";
 
 export default function JobOpportunities() {
   return (
@@ -41,15 +41,6 @@ export default function JobOpportunities() {
         src={ImageJobOpportunities}
         className="absolute right-0 top-0 h-full w-auto object-cover z-[-1] brightness-50 bg-gray-100 md:brightness-100 md:bg-transparent "
       />
-    </div>
-  );
-}
-
-function JobOpportunityItem({ children }: { children: string }) {
-  return (
-    <div className="flex items-center gap-[20px] font-light text-[16px]">
-      <BulletPoint className="w-[14px] h-[8px] text-[#879DA5]" />
-      {children}
     </div>
   );
 }

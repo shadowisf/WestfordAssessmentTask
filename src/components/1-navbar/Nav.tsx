@@ -69,10 +69,12 @@ export default function Nav() {
       />
 
       <MobileNavModal
-        isOpen={mobileNavOpen}
-        onClose={() => setMobileNavOpen(false)}
+        mobileNavOpen={mobileNavOpen}
+        setMobileNavOpen={setMobileNavOpen}
         programsOpen={programsOpen}
         setProgramsOpen={setProgramsOpen}
+        deMontPlusOpen={deMontPlusOpen}
+        setDeMontPlusOpen={setDeMontPlusOpen}
       />
     </>
   );
