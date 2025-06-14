@@ -5,7 +5,7 @@ import IconDeMontLogo from "@assets/icons/demont-logo.svg";
 
 export default function InquiryPanel() {
   return (
-    <div className="grid grid-cols-3 py-[93px] px-[225px] bg-[#F5FAFC] place-items-center">
+    <div className="grid lg:grid-cols-2 xl:grid-cols-3 py-[93px] px-[42px] xl:px-[225px] bg-[#F5FAFC] place-items-center gap-[100px]">
       <InquiryItem
         img={
           <>

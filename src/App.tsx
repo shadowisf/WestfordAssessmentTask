@@ -28,7 +28,7 @@ export default function App() {
 
       <ExploreCourses />
 
-      {/* <InquiryPanel /> */}
+      <InquiryPanel />
 
       {/* <Footer /> */}
     </>

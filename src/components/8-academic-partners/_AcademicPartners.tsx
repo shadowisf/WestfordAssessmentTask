@@ -6,7 +6,7 @@ import { ArrowRightMinimal } from "../svg/ArrowsMinimal";
 export default function AcademicPartners() {
   return (
     <div className="py-[83px] px-[42px] xl:px-[124px] bg-[#E7EBED]">
-      <div className="grid lg:grid-cols-1 xl:grid-cols-3 gap-[50px] xl:gap-[100px]">
+      <div className="grid lg:grid-cols-1 xl:grid-cols-3 gap-[50px] xl:gap-[100px] place-items-center">
         {/* pearson academic partner card */}
         <div className="order-2 xl:order-1 w-[287px] xl:w-[343px] h-[450px] rounded-[25px] bg-[#0C2D46]">
           <div className="rounded-t-[25px] p-[8px] bg-[#0C2D46]">
