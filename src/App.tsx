@@ -24,7 +24,7 @@ export default function App() {
 
       <RelatedCourses />
 
-      {/* <AcademicPartners /> */}
+      <AcademicPartners />
 
       {/* <ExploreCourses /> */}
 

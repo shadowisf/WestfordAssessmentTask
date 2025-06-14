@@ -5,10 +5,10 @@ import { ArrowRightMinimal } from "../svg/ArrowsMinimal";
 
 export default function AcademicPartners() {
   return (
-    <div className="py-[83px] px-[124px] bg-[#E7EBED]">
-      <div className="grid grid-cols-3">
+    <div className="py-[83px] px-[42px] xl:px-[124px] bg-[#E7EBED]">
+      <div className="grid lg:grid-cols-1 xl:grid-cols-3 gap-[50px] xl:gap-[100px]">
         {/* pearson academic partner card */}
-        <div className="w-[343px] h-[450px] rounded-[25px] bg-[#0C2D46]">
+        <div className="order-2 xl:order-1 w-[287px] xl:w-[343px] h-[450px] rounded-[25px] bg-[#0C2D46]">
           <div className="rounded-t-[25px] p-[8px] bg-[#0C2D46]">
             <img
               className="bg-white py-[64px] px-[55px] rounded-t-[18px]"
@@ -22,7 +22,7 @@ export default function AcademicPartners() {
             resources.
           </p>
 
-          <div className="flex items-center justify-between text-[16px] font-semibold ">
+          <div className="flex items-center justify-between text-[12px] xl:text-[16px] font-semibold ">
             <button className="py-[7px] px-[28px] rounded-e-[15px] bg-white hover:bg-[#879DA5] hover:text-white transition-colors duration-300 ease-out cursor-pointer">
               Get in touch!
             </button>
@@ -35,15 +35,16 @@ export default function AcademicPartners() {
           </div>
         </div>
 
-        <div className="space-y-[49px]">
+        {/* ncfe */}
+        <div className="order-3 xl:order-2 space-y-[49px]">
           <div
-            className="group relative w-[343px] h-[200px] bg-white px-[74px] pt-[67px] pb-[89px] rounded-[25px]"
+            className="group relative w-[287px] xl:w-[343px] h-[200px] bg-white px-[74px] pt-[67px] pb-[89px] rounded-[25px]"
             style={{ boxShadow: "0 0 15px rgba(0, 0, 0, 0.08)" }}
           >
             <img src={ImageNCFELogo} />
 
             {/* ncfe academic partner card */}
-            <div className="absolute inset-0 w-[343px] h-[450px] rounded-[25px] bg-[#0C2D46] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
+            <div className="absolute inset-0 w-[287px] xl:w-[343px] h-[450px] rounded-[25px] bg-[#0C2D46] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
               <div className="rounded-t-[25px] group-hover:p-[8px]  transition-padding duration-300 ease-out bg-[#0C2D46]">
                 <img
                   src={ImageNCFELogo}
@@ -57,7 +58,7 @@ export default function AcademicPartners() {
                 qualifications, and resources.
               </p>
 
-              <div className="flex items-center justify-between text-[16px] font-semibold ">
+              <div className="flex items-center justify-between text-[12px] xl:text-[16px] font-semibold ">
                 <button className="py-[7px] px-[28px] rounded-e-[15px] bg-white hover:bg-[#879DA5] hover:text-white transition-colors duration-300 ease-out cursor-pointer">
                   Get in touch!
                 </button>
@@ -72,14 +73,15 @@ export default function AcademicPartners() {
           </div>
 
           <div
-            className="w-[343px] h-[200px] bg-white px-[74px] pt-[67px] pb-[89px] rounded-[25px]"
+            className="w-[287px] xl:w-[343px] h-[200px] bg-white px-[74px] pt-[67px] pb-[89px] rounded-[25px]"
             style={{ boxShadow: "0 0 15px rgba(0, 0, 0, 0.08)" }}
           >
             <img src={ImageCMILogo} />
           </div>
         </div>
 
-        <div className="space-y-[20px]">
+        {/* text */}
+        <div className="order-1 xl:order-3 space-y-[20px]">
           <h1 className="text-[40px]">
             Discover Our Academic{" "}
             <span className="text-[#ECA22D]">Partners</span>
