@@ -3,7 +3,7 @@ import BulletPoint from "../svg/BulletPoint";
 
 export default function JobOpportunities() {
   return (
-    <div className="relative p-[42px] flex md:text-black text-white">
+    <div className="relative p-[32px] xl:p-[42px] flex md:text-black text-white">
       {/* left container */}
       <div className="space-y-[40px] md:w-[400px] lg:w-[600px] xl:w-[814px]">
         <section className="space-y-[20px]">

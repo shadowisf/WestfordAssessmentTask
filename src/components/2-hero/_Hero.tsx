@@ -39,7 +39,7 @@ export default function Hero() {
             </section>
 
             {/* stats grid */}
-            <section className="py-[25px] px-[42px] bg-[#0C2D46] text-white flex gap-[70px]">
+            <section className="py-[25px] px-[32px] xl:px-[42px] bg-[#0C2D46] text-white flex gap-[70px]">
               <StatItem img={IconClock} header="Duration">
                 24 months
               </StatItem>
@@ -129,7 +129,7 @@ export default function Hero() {
             <span>Back to all Programs</span>
           </a>
 
-          <div className="grid grid-cols-1 place-items-center gap-12">
+          <div className="grid grid-cols-1 place-items-center gap-12 mt-12">
             <img
               className="w-[180px] p-4 bg-[#F6F6F6] rounded-[40px]"
               src={ImagePearson}

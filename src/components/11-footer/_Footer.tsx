@@ -13,10 +13,10 @@ export default function Footer() {
 
   return (
     <>
-      <div className="pt-[83px] pb-[107px] px-[42px] bg-[#0C2D46] text-white">
-        <div className="grid grid-cols-4">
+      <div className="pt-[83px] pb-[107px] px-[32px] bg-[#0C2D46] text-white">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center items-start gap-[100px]  xl:gap-[50px]">
           {/* very left container */}
-          <div className="space-y-[55px]">
+          <div className="space-y-[55px] w-[282px]">
             <img src={IconDeMontLogoAlt} className="w-[282px]" />
 
             <div className="space-y-[26px]">
@@ -77,34 +77,41 @@ export default function Footer() {
           {/* very right container */}
           <div className="space-y-[14px]">
             <h1 className="text-[26px]">Get in Touch</h1>
-            <div className="space-y-[14px]">
+            <form className="space-y-[14px] flex flex-col">
               <input
                 type="text"
                 placeholder="Name"
-                className="py-[8px] px-[23px] bg-[#E7EBED] rounded-[25px] w-[272px] text-black font-light text-[16px]"
+                className="py-[8px] px-[23px] bg-[#E7EBED] rounded-[25px] w-[200px] xl:w-[272px] text-black font-light text-[16px]"
+                required
               />
               <input
                 type="text"
                 placeholder="Email"
-                className="py-[8px] px-[23px] bg-[#E7EBED] rounded-[25px] w-[272px] text-black font-light text-[16px]"
+                className="py-[8px] px-[23px] bg-[#E7EBED] rounded-[25px] w-[200px] xl:w-[272px] text-black font-light text-[16px]"
+                required
               />
               <input
                 type="text"
                 placeholder="Phone"
-                className="py-[8px] px-[23px] bg-[#E7EBED] rounded-[25px] w-[272px] text-black font-light text-[16px]"
+                className="py-[8px] px-[23px] bg-[#E7EBED] rounded-[25px] w-[200px] xl:w-[272px] text-black font-light text-[16px]"
+                required
               />
 
               <div className="flex items-center gap-[8px]">
                 <textarea
                   placeholder="Message"
-                  className="min-h-[77px] resize-none py-[8px] px-[23px] bg-[#E7EBED] rounded-[25px] w-[272px] text-black font-light text-[16px]"
+                  className="min-h-[77px] flex-shrink-0 resize-none py-[8px] px-[23px] bg-[#E7EBED] rounded-[25px] w-[200px] xl:w-[272px] text-black font-light text-[16px]"
+                  required
                 />
-                <button className="cursor-pointer hover:text-[#ECA22D] transition-colors duration-300 ease-out">
+                <button
+                  type="submit"
+                  className="cursor-pointer hover:text-[#ECA22D] transition-colors duration-300 ease-out"
+                >
                   <Submit />
                 </button>
               </div>
 
-              <label className="flex gap-[10px] cursor-pointer">
+              <label className="flex gap-[10px] cursor-pointer w-[200px] xl:w-[272px]">
                 <input
                   type="checkbox"
                   className="hidden"
@@ -125,7 +132,7 @@ export default function Footer() {
                   via email or call
                 </span>
               </label>
-            </div>
+            </form>
           </div>
         </div>
       </div>

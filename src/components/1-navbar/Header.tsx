@@ -30,7 +30,7 @@ export default function Header() {
         </a>
         <a
           href="#"
-          className="block h-[45px] flex items-center gap-[5px] px-[25px] bg-[#ECA22D]"
+          className="block h-[70px] sm:h-[45px] flex items-center gap-[5px] px-[25px] bg-[#ECA22D]"
         >
           Apply
           <ArrowRight />

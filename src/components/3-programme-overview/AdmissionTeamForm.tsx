@@ -33,7 +33,10 @@ export default function AdmissionTeamForm() {
           <div className="flex flex-col gap-[14px] w-[227px]">
             <label>Interested Course</label>
             <div className="relative w-full">
-              <select className="font-light border-b border-[#D0D4D6] text-[#6D6D6D] text-[16px] pb-[5px] focus:outline-none appearance-none w-full pr-10">
+              <select
+                className="font-light border-b border-[#D0D4D6] text-[#6D6D6D] text-[16px] pb-[5px] focus:outline-none appearance-none w-full pr-10"
+                required
+              >
                 <option value="">Select a Course</option>
                 <option value="">placeholder</option>
                 <option value="">placeholder</option>
@@ -58,7 +61,10 @@ export default function AdmissionTeamForm() {
             />
           </div>
 
-          <button className="group w-[254px] h-[38px] ps-[34px] cursor-pointer rounded-s-[15px] transition-colors duration-300 ease-out hover:bg-[#879DA5] bg-[#ECA22D] flex items-center gap-[9px] text-[16px] text-white font-semibold">
+          <button
+            type="submit"
+            className="group w-[254px] h-[38px] ps-[34px] cursor-pointer rounded-s-[15px] transition-colors duration-300 ease-out hover:bg-[#879DA5] bg-[#ECA22D] flex items-center gap-[9px] text-[16px] text-white font-semibold"
+          >
             Schedule a Call
             <ArrowRightMinimal className="text-black transition-transform duration-300 ease-out group-hover:text-white group-hover:translate-x-4" />
           </button>
@@ -81,6 +87,7 @@ function FormItem({ children, placeholder }: FormItemProps) {
         type="text"
         placeholder={placeholder}
         className="font-light border-b border-[#D0D4D6] placeholder-[#6D6D6D] text-[16px] pb-[5px] focus:outline-none"
+        required
       />
     </div>
   );

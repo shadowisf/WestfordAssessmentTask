@@ -12,7 +12,7 @@ import { ArrowRightMinimal } from "../svg/ArrowsMinimal";
 
 export default function RelatedCourses() {
   return (
-    <div className="px-[42px] pb-[69px] space-y-[47px] pb-[69px]">
+    <div className="px-[32px] xl:px-[42px] pb-[69px] space-y-[47px] pb-[69px]">
       <h1 className="text-[40px]">
         Related <span className="text-[#ECA22D]">Courses</span>
       </h1>

@@ -4,7 +4,7 @@ import ImagePearsonLogo from "@assets/images/pearson-logo.png";
 export default function MinimumEligibility() {
   return (
     <>
-      <div className="px-[42px] pt-[40px] pb-[61px] bg-[#0C2D46] text-white space-y-[20px]">
+      <div className="px-[32px] xl:px-[42px] pt-[40px] pb-[61px] bg-[#0C2D46] text-white space-y-[20px]">
         <h1 className="text-[40px]">
           <span className="text-[#ECA22D]">Who</span> Is This Programme For?
         </h1>
@@ -18,7 +18,7 @@ export default function MinimumEligibility() {
         </p>
       </div>
 
-      <div className="px-[42px] pt-[40px] pb-[77px] space-y-[77px]">
+      <div className="px-[32px] xl:px-[42px] pt-[40px] pb-[77px] space-y-[77px]">
         {/* minimum eligiblity */}
         <div className="space-y-[20px]">
           <h1 className="text-[40px]">

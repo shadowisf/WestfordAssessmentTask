@@ -13,7 +13,7 @@ export default function TopSkills() {
       </h1>
 
       {/* skills grid */}
-      <section className="grid lg:grid-cols-2 xl:grid-cols-3 gap-[42px] xl:gap-[83px] xl:px-[167px] place-items-center ">
+      <section className="grid lg:grid-cols-2 xl:grid-cols-3 gap-[32px] xl:gap-[83px] xl:px-[167px] place-items-center ">
         <SkillItem img={ImageProgrammingProficiency}>
           Programming Proficiency
         </SkillItem>

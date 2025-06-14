@@ -11,7 +11,7 @@ export default function ProgrammeOverview() {
   return (
     <div className="my-[64px] flex justify-between">
       <div className="space-y-[91px] text-[16px]">
-        <section className="mx-[45px] flex flex-wrap justify-center xl:justify-start gap-[50px] xl:gap-[100px] 2xl:gap-[143px]">
+        <section className="mx-[32px] xl:mx-[42px] flex flex-wrap justify-center xl:justify-start gap-[50px] xl:gap-[100px] 2xl:gap-[143px]">
           {/* get brochure link */}
           <a
             href="#"
@@ -62,7 +62,7 @@ export default function ProgrammeOverview() {
           </div>
         </section>
 
-        <section className="mx-[45px]">
+        <section className="mx-[32px] xl:mx-[42px]">
           <h1 className="text-[40px]">
             <span>Programme</span>{" "}
             <span className="text-[#ECA22D]">Overview</span>
